@@ -47,8 +47,8 @@
 	    <publishOdomTF>true</publishOdomTF>
 
 	    <!-- Limits -->
-	    <max_wheel_torque>200</max_wheel_torque>
-	    <max_wheel_acceleration>10.0</max_wheel_acceleration>
+	    <max_wheel_torque>20000</max_wheel_torque>
+	    <max_wheel_acceleration>10000.0</max_wheel_acceleration>
 
 	    <!-- Update rate -->
 	    <updateRate>100</updateRate>

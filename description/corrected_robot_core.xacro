@@ -59,7 +59,7 @@
 
 
     <gazebo reference="chassis">
-	<material>Gazebo/white</material>
+	    <material>Gazebo/White</material>
     </gazebo>
 
     <!-- LEFT WHEEL LINK -->
@@ -89,7 +89,7 @@
     </link>
 
     <gazebo reference="left_wheel">
-	<material>Gazebo/blue</material>
+	    <material>Gazebo/Blue</material>
     </gazebo>
 
     <!-- RIGHT WHEEL LINK -->
@@ -119,7 +119,7 @@
     </link>
 
     <gazebo reference="right_wheel">
-	<material>Gazebo/blue</material>
+	    <material>Gazebo/Blue</material>
     </gazebo>
 
 
@@ -151,9 +151,9 @@
     </link>
 
     <gazebo reference="caster_wheel_fl">
-	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+	    <material>Gazebo/Black</material>
+        <mu1 value="0.001"></mu1>
+        <mu2 value="0.001"></mu2>
     </gazebo>
 
  <!-- caster_wheel_joint_fr LINK -->
@@ -182,9 +182,9 @@
     </link>
 
     <gazebo reference="caster_wheel_fr">
-	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+	    <material>Gazebo/Black</material>
+        <mu1 value="0.001"></mu1>
+        <mu2 value="0.001"></mu2>
     </gazebo>
 
  <!-- caster_wheel_joint_bl LINK -->
@@ -213,9 +213,9 @@
     </link>
 
     <gazebo reference="caster_wheel_bl">
-	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+	    <material>Gazebo/Black</material>
+        <mu1 value="0.001"></mu1>
+        <mu2 value="0.001"></mu2>
     </gazebo>
 
  <!-- caster_wheel_joint_br LINK -->
@@ -244,9 +244,9 @@
     </link>
 
     <gazebo reference="caster_wheel_br">
-	<material>Gazebo/black</material>
-    <mu1 value="0.001"></mu1>
-    <mu2 value="0.001"></mu2>
+	    <material>Gazebo/Black</material>
+        <mu1 value="0.001"></mu1>
+        <mu2 value="0.001"></mu2>
     </gazebo>
 
 </robot>
