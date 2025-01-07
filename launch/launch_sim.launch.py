@@ -36,6 +36,13 @@ def generate_launch_description():
                         arguments=['-topic', 'robot_description',
                                    '-entity', 'agv_schaeffler'],
                         output='screen')
+    
+    # Include the rviz2 launch file
+    rviz2 = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','rviz2.launch.py'
+                )]),
+    )
 
 
 
@@ -44,4 +51,5 @@ def generate_launch_description():
         rsp,
         gazebo,
         spawn_entity,
+        #rviz2,
     ])

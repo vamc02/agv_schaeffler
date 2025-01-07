@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<!--	<gazebo>
+	<gazebo>
 	   <plugin name ="diff_drive" filename="libgazebo_ros_diff_drive.so">
-			 wheel information
+			<!-- wheel information -->
 			<left_joint>left_wheel_joint</left_joint>
 			<right_joint>right_wheel_joint</right_joint>
 			<wheel_seperation>0.7</wheel_seperation>
 			<wheel_diameter>0.16</wheel_diameter>
 
 
-			Limits
+			<!-- Limits -->
 			<max_wheel_torque>200</max_wheel_torque>
 			<max_wheel_accleration>10.0</max_wheel_accleration>
 
-			Output
+			<!-- Output -->
 			<odometry_frame>odom</odometry_frame>
 			<robot_base_frame>base_link</robot_base_frame>
 
@@ -23,38 +23,37 @@
 			<publish_wheel_tf>true</publish_wheel_tf>
 
 	   </plugin>
-	</gazebo>  -->
+	</gazebo> 
 
-
+    <!--
 	<gazebo>
 	  <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
-	    <!-- Wheel information -->
+	    Wheel information
 	    <left_joint>left_wheel_joint</left_joint>
 	    <right_joint>right_wheel_joint</right_joint>
-	    <wheel_separation>0.7</wheel_separation> <!-- Adjust as per your robot -->
-	    <wheel_diameter>0.16</wheel_diameter> <!-- Adjust as per your robot -->
+	    <wheel_separation>0.7</wheel_separation>
+	    <wheel_diameter>0.16</wheel_diameter>
 
-	    <!-- Control topics -->
+	    Control topics
 	    <commandTopic>/cmd_vel</commandTopic>
 	    <odometryTopic>/odom</odometryTopic>
 
-	    <!-- Frames -->
+	    Frames
 	    <odometryFrame>odom</odometryFrame>
 	    <robotBaseFrame>base_footprint</robotBaseFrame>
 
-	    <!-- Publish settings -->
+	    Publish settings
 	    <publishWheelTF>true</publishWheelTF>
 	    <publishOdomTF>true</publishOdomTF>
 
-	    <!-- Limits -->
+	    Limits
 	    <max_wheel_torque>20000</max_wheel_torque>
 	    <max_wheel_acceleration>10000.0</max_wheel_acceleration>
 
-	    <!-- Update rate -->
+	    Update rate
 	    <updateRate>100</updateRate>
 	  </plugin>
-	</gazebo>
-
+	</gazebo>  -->
 </robot> 
 
 
