@@ -4,7 +4,7 @@
     <joint name="laser_fornt_joint" type="fixed">
         <parent link="chassis" />
         <child link="laser_front" />
-        <origin xyz="1.04 0.4 0.14" rpy="0 0 -${pi/4}" />
+        <origin xyz="0.5 0.35 0.14" rpy="0 0 ${pi/6}" />
     </joint>
 
     <link name="laser_front">
@@ -16,11 +16,102 @@
             <material name="red" />
         </visual>
         <collision>
-            <origin xyz="1.03 1.03 0.14" />
+            <origin xyz="0 0 0"/>
             <geometry>
                 <box size="0.07 0.05 0.1" />
             </geometry>
         </collision>
+        <xacro:inertial_box mass="2" x="0.007" y="0.05" z="0.1">
+            <origin xyz="0 0 0" rpy="0 0 ${pi/6}" />
+        </xacro:inertial_box>
      </link>
+
+     <gazebo reference="laser_front">
+        <material>Gazebo/Red</material>
+
+        <sensor name="laser1" type="ray">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true</visualize>
+            <update_rate>10</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>270</samples>
+                        <min_angle>-2.35</min_angle>
+                        <max_angle>2.35</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.5</min>
+                    <max>10</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller_fornt" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan_front</argument>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>laser_front</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+
+
+
+     <joint name="laser_back_joint" type="fixed">
+        <parent link="chassis" />
+        <child link="laser_back" />
+        <origin xyz="-0.5 -0.35 0.14" rpy="0 0 3.66" />
+    </joint>
+
+    <link name="laser_back">
+        <visual>
+            <origin xyz="0 0 0" />
+            <geometry>
+                <box size="0.07 0.05 0.1" />
+            </geometry>
+            <material name="red" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.07 0.05 0.1" />
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="2" x="0.007" y="0.05" z="0.1">
+            <origin xyz="0 0 0" rpy="0 0 3.66" />
+        </xacro:inertial_box>
+     </link>
+
+      <gazebo reference="laser_back">
+        <material>Gazebo/Red</material>
+
+        <sensor name="laser2" type="ray">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true</visualize>
+            <update_rate>10</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>270</samples>
+                        <min_angle>-2.35</min_angle>
+                        <max_angle>2.35</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.5</min>
+                    <max>10</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller_back" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan_back</argument>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>laser_back</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
 </robot>
 
