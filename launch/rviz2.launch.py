@@ -5,7 +5,7 @@ import os
 def generate_launch_description():
     # Define the path to your RViz configuration file
     rviz_config_file = os.path.join(
-        os.getenv('HOME'), 'agv', 'src', 'agv_schaeffler', 'config', 'view_agv.rviz'
+        os.getenv('HOME'),'Documents','thesis_ssh_work', 'agv', 'src', 'agv_schaeffler', 'config', 'drive_agv_lidar.rviz'
     )
 
     # Create an RViz2 Node
